@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+   <children>
+      <Button fx:id="buttonExit" layoutX="1600.0" layoutY="760.0" mnemonicParsing="false" onAction="#handleButtonExit" text="Exit" />
+      <TableView fx:id="tableViewCustomers" layoutX="1125.0" layoutY="380.0" prefHeight="240.0" prefWidth="430.0">
+        <columns>
+          <TableColumn fx:id="tableColumnCustomerId" prefWidth="48.0" text="ID" />
+          <TableColumn fx:id="tableColumnCustomerName" prefWidth="131.199951171875" text="Name" />
+            <TableColumn fx:id="tableColumnCustomerAddress" prefWidth="120.800048828125" text="Address" />
+            <TableColumn fx:id="tableColumnCustomerPhone" minWidth="2.39996337890625" prefWidth="134.4000244140625" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="1125.0" layoutY="322.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="341.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewAppointments" layoutX="44.0" layoutY="380.0" prefHeight="240.0" prefWidth="1000.0">
+        <columns>
+          <TableColumn fx:id="tableColumnAppointmentId" prefWidth="45.60003662109375" text="ID" />
+            <TableColumn fx:id="tableColumnAppointmentTitle" prefWidth="104.0" text="Title" />
+            <TableColumn fx:id="tableColumnAppointmentLocation" prefWidth="105.59996032714844" text="Location" />
+            <TableColumn fx:id="tableColumnAppointmentContact" prefWidth="98.4000244140625" text="Contact" />
+          <TableColumn fx:id="tableColumnAppointmentType" minWidth="8.0" prefWidth="140.0" text="Type" />
+            <TableColumn fx:id="tableColumnAppointmentStart" prefWidth="158.39996337890625" text="Start" />
+            <TableColumn fx:id="tableColumnAppointmentEnd" minWidth="2.39990234375" prefWidth="136.7999267578125" text="End" />
+            <TableColumn fx:id="tableColumnAppointmentCustomerId" prefWidth="121.5999755859375" text="Customer ID" />
+            <TableColumn fx:id="tableColumnAppointmentUserId" prefWidth="88.80010986328125" text="User ID" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonAddCustomer" layoutX="1125.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonAddCustomer" text="Add" />
+      <Button fx:id="buttonModifyCustomer" layoutX="1181.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonModifyCustomer" text="Modify" />
+      <Button fx:id="buttonDeleteCustomer" layoutX="1255.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonDeleteCustomer" text="Delete" />
+      <Button fx:id="buttonAddAppointment" layoutX="44.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonAddAppointment" text="Add" />
+      <Button fx:id="buttonModifyAppointment" layoutX="103.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonModifyAppointment" text="Modify" />
+      <Button fx:id="buttonDeleteAppointment" layoutX="174.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleButtonDeleteAppointment" text="Delete" />
+      <Button fx:id="buttonOpenCalendar" layoutX="453.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleButtonOpenCalendar" prefHeight="50.0" prefWidth="130.0" text="Open Calendar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label layoutX="728.0" layoutY="14.0" text="Contact Schedule">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewContactSchedule" layoutX="728.0" layoutY="64.0" prefHeight="240.0" prefWidth="880.0">
+        <columns>
+          <TableColumn fx:id="tableColumnContactAppointmentId" prefWidth="128.79998779296875" text="Appointment ID" />
+          <TableColumn fx:id="tableColumnContactTitle" prefWidth="120.79997253417969" text="Title" />
+            <TableColumn fx:id="tableColumnContactType" prefWidth="118.4000244140625" text="Type" />
+            <TableColumn fx:id="tableColumnContactDescription" prefWidth="123.99993896484375" text="Description" />
+            <TableColumn fx:id="tableColumnContactStart" prefWidth="149.60009765625" text="Start" />
+            <TableColumn fx:id="tableColumnContactEnd" prefWidth="136.0" text="End" />
+            <TableColumn fx:id="tableColumnContactCustomerId" prefWidth="103.199951171875" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboBoxContact" layoutX="979.0" layoutY="20.0" onAction="#handleComboBoxContact" prefWidth="150.0" promptText="Select Contact" />
+      <GridPane layoutX="42.0" layoutY="52.0" prefHeight="240.0" prefWidth="294.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.2000732421875" minWidth="10.0" prefWidth="111.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="183.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Local Time: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="EST:" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="UTC:" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLocal" text="LOCAL" GridPane.columnIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelEST" text="EST" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelUTC" text="UTC" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="buttonOpenReports" layoutX="453.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleButtonOpenReports" prefHeight="50.0" prefWidth="130.0" text="Open Reports">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
