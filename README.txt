@@ -2,7 +2,7 @@ Schedule Application v1.0.2
 
 Welcome to the Schedule Application. This program allows a user to login into the schedule client database to add, modify, and delete customers and appointments. 
 
-This program was created by Caleb Lugo and was finished on 2/8/2022. Contact info is NotARealEmail@gmail.com, 111-111-1111. Javadoc files are located the main folder of the project, index.html can be accessed here.
+This program was created by Caleb Lugo and was finished on 2/8/2022. Javadoc files are located the main folder of the project, index.html can be accessed here.
 
 IDE: Apache NetBeans IDE 12.6
 Java: 11.0.11
